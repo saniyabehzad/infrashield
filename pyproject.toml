@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "infrashield"
+version = "0.1.0"
+description = "GenAI agent that flags telecom sites on moving ground using Copernicus EGMS InSAR data"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Saniya Behzadpour" }]
+dependencies = [
+    "numpy>=1.26",
+    "pandas>=2.1",
+    "scipy>=1.11",
+    "pyproj>=3.6",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+agent = ["strands-agents", "strands-agents-tools", "bedrock-agentcore"]
+dev = ["pytest>=8", "ruff>=0.5"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
