@@ -94,7 +94,7 @@ The data-source layer is pluggable (`src/infrashield/sources/`), so a national I
 ## Quick start (local)
 
 ```bash
-git clone https://github.com/<your-username>/infrashield.git
+git clone https://github.com/saniyabehzad/infrashield.git
 cd infrashield
 python -m venv .venv && source .venv/bin/activate
 pip install -e ".[dev]"
